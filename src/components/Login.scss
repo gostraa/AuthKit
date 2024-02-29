@@ -5,6 +5,7 @@
 }
 
 .background {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +16,7 @@
 }
 
 .login-container {
+  position: absolute;
   width: 350px;
   padding: 40px 30px;
   text-align: center;
