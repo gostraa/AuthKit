@@ -17,12 +17,14 @@
 
 .login-container {
   position: absolute;
-  width: 400px;
-
   padding: 40px 30px;
   text-align: center;
   color: #fff;
   border: 1px solid transparent;
+  width: 350px;
+  @media screen and (max-width: 768px) {
+    max-width: 220px; /* Новая максимальная ширина контейнера */
+  }
 
   --border-angle: 0turn;
   --main-bg: conic-gradient(
