@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Login.scss";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   useEffect(() => {
@@ -41,6 +42,7 @@ const Login = () => {
 
       <div className="login-container" id="login-container">
         <h2>Login</h2>
+
         <form>
           <div className="form-group">
             <input
@@ -68,6 +70,9 @@ const Login = () => {
           </p>
         </div>
       </div>
+      <NavLink className="link" to="/users">
+        next
+      </NavLink>
     </div>
   );
 };

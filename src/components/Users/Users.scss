@@ -1,0 +1,168 @@
+.previous {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(166, 51, 215, 0.8);
+  border-radius: 20px;
+  color: rgba(148, 112, 182, 0.93);
+  text-decoration: none;
+  z-index: 1000;
+}
+
+@for $i from 1 through 100 {
+  $x: random(100) * 1vw;
+  $y: random(100) * 1vh;
+  $delay: random() * 2;
+
+  .star:nth-child(#{$i}) {
+    left: $x;
+    bottom: $y;
+    animation-delay: $delay * 3s;
+  }
+}
+@for $i from 1 through 7 {
+  $random-x: random(10);
+  $random-y: random(60);
+
+  .avatar:nth-child(#{$i}) {
+    left: #{$random-x}vw;
+    bottom: #{$random-y}vh;
+    animation-delay: $i * 0.5s;
+  }
+}
+
+.users-wrapper {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.portal {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  border: 10px solid rgba(85, 62, 97, 0.568);
+  border-radius: 50%;
+  animation: portal-pulse 3s linear infinite,
+    glow 3s ease-in-out infinite alternate;
+  background: radial-gradient(
+    circle at center,
+    rgba(166, 51, 215, 0.8),
+    rgba(166, 51, 215, 0.2) 90%,
+    transparent
+  );
+  transform-origin: center center;
+  box-shadow: inset 0 0 100px 30px rgba(0, 0, 0, 0.5),
+    0 0 30px 20px rgba(148, 112, 182, 0.5);
+  z-index: 1000;
+}
+
+.portal::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: pulse 3s infinite linear;
+}
+
+.users-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.star {
+  position: absolute;
+
+  animation: fade 3s infinite;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 30vh;
+}
+
+.avatar {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  border: 2px solid pink;
+  animation: move 3s infinite;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px pink;
+  z-index: 10000;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    width: 20px;
+    height: 20px;
+  }
+  50% {
+    width: 1px;
+    height: 1px;
+  }
+}
+
+@keyframes portal-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotateX(-0.3turn);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateX(-0.3turn);
+    opacity: 0.8;
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translate(40%, 300px);
+  }
+  10% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+    transform: translate(52px, 28px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-100px, -200px) translate3d(42px, -62px, -135px);
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 30px 20px rgba(148, 112, 182, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 50px 40px rgba(148, 112, 182, 0.8);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}

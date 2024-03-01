@@ -3,6 +3,16 @@
   inherits: true;
   initial-value: 0turn;
 }
+.link {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
 
 .background {
   position: relative;
@@ -23,7 +33,7 @@
   border: 1px solid transparent;
   width: 350px;
   @media screen and (max-width: 768px) {
-    max-width: 220px; /* Новая максимальная ширина контейнера */
+    max-width: 220px;
   }
 
   --border-angle: 0turn;
