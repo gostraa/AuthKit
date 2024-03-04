@@ -39,6 +39,9 @@ const Users = () => {
       </div>
 
       <div className="portal"></div>
+      <NavLink className="link-user" to="/radar">
+        next
+      </NavLink>
     </div>
   );
 };
