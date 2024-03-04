@@ -7,23 +7,23 @@ const Login = () => {
     const el = document.getElementById("login-container");
 
     function detectaCoordsElem(e) {
-      var coords = e.getBoundingClientRect();
+      let coords = e.getBoundingClientRect();
       return {
-        x: coords.left + coords.width / 2,
-        y: coords.top + coords.height / 2,
+        x: coords.right + coords.height / 2,
+        y: coords.bottom + coords.width / 2,
       };
     }
 
     function mueveElem(el, x, y) {
       el.style.setProperty(
         "transform",
-        `translateY(${x / 20}px) translateX(${-y / 20}px) translateZ(0px)`
+        `translateY(${x / 30}px) translateX(${y / 30}px) translateZ(0px)`
       );
     }
 
     function handleMouseMove(e) {
-      var x = e.clientX - detectaCoordsElem(el).x;
-      var y = e.clientY - detectaCoordsElem(el).y;
+      let y = e.clientX - detectaCoordsElem(el).x;
+      let x = e.clientY - detectaCoordsElem(el).y;
       mueveElem(el, x, y);
     }
 
