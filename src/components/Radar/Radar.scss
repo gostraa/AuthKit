@@ -36,7 +36,7 @@
   filter: blur(4px);
   animation: glow-dots 7s ease-out infinite;
   animation-delay: 4.5s;
-} //dot
+} //dots
 
 .radar::after {
   content: "";
@@ -52,7 +52,7 @@
   filter: blur(4px);
   animation: glow-dots 7s ease-out infinite;
   animation-delay: 3s;
-} //dot
+} //dots
 
 .radar li:nth-child(1),
 .radar li:nth-child(2),
