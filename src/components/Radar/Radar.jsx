@@ -19,6 +19,9 @@ const Radar = () => {
         <li></li>
       </ul>
       <div className="visible"></div>
+      <NavLink className="link-user" to="/letter">
+        next
+      </NavLink>
     </div>
   );
 };
