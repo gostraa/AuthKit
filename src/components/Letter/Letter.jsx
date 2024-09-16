@@ -13,7 +13,7 @@ const Letter = () => {
           <div className="letter">
             <a
               className="letter-text"
-              href="https://gostraa.github.io/portfolio/"
+              href="https://portfolio-seven-olive-29.vercel.app/"
             >
               click here
             </a>
